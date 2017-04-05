@@ -24,3 +24,16 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let argv = () => {
+
+  let userInput = [];
+  process.argv.forEach((val, idx) => {
+    if(idx >= 2) {
+      userInput.push(val);
+    }
+  });
+  let result = userInput.join(' ');
+  return convert(result);
+}
+
+console.log(argv());
