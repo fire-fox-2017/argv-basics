@@ -1,4 +1,4 @@
-'use strict'
+//'use strict'
 
 let pigLatin = (word) => {
   let firstLetter = word.charAt(0);
@@ -23,4 +23,9 @@ let convert = (sentence) => {
   return result.join(" ")
 }
 
-// Your CLI code here
+let arguments = process.argv;
+let converted_sentence = "";
+for (let i = 2; i < arguments.length; i++){
+  converted_sentence += pigLatin(arguments[i] + " ");
+}
+console.log(converted_sentence);
