@@ -24,3 +24,8 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let processConvert = process.argv
+processConvert.shift()
+processConvert.shift()
+
+console.log(convert(String(processConvert).replace(',', ' ')));
