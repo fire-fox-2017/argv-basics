@@ -24,3 +24,13 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let argv=process.argv;
+if(argv.length>1){
+  argv.shift();
+  argv.shift();
+  let str=argv.join();
+  str=str.replace(/,/g," ");
+  console.log(convert(str));
+}else{
+  console.log("now word detected");
+}
