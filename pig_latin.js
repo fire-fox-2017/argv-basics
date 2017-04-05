@@ -15,7 +15,7 @@ let isPowel = (char) => {
 
 let convert = (sentence) => {
   let result = []
-  let words = sentence.trim().split(/\s+/g)
+  let words = sentence;
   for (let i=0;i<words.length;i++) {
     result[i] = pigLatin(words[i])
   }
@@ -24,3 +24,15 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let argv = () => {
+
+  let result = [];
+  process.argv.forEach((val, idx) => {
+    if(idx >= 2) {
+      result.push(val);
+    }
+  });
+  return convert(result);
+}
+
+console.log(argv());
