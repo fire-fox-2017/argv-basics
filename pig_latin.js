@@ -24,3 +24,13 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let input = process.argv;
+let tmpKalimat = [];
+
+for (var i = 2; i < input.length; i++) {
+  tmpKalimat.push(input[i]);
+}
+
+let kalimat = tmpKalimat.join(' ');
+
+console.log(convert(kalimat));
