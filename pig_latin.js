@@ -22,5 +22,9 @@ let convert = (sentence) => {
 
   return result.join(" ")
 }
-
 // Your CLI code here
+// let data = process.argv;
+// for(let i=2; i<data.length; i++){
+//   console.log(pigLatin(data[i]));
+// }
+console.log(convert(process.argv.slice(2).join(' ')))
