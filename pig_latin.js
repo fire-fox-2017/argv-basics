@@ -1,3 +1,4 @@
+//LRN
 'use strict'
 
 let pigLatin = (word) => {
@@ -24,3 +25,5 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let input = process.argv
+console.log(convert(input.slice(2).join(' ')));
