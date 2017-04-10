@@ -24,3 +24,17 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+var arrKalimat=[];
+var kalimat=""
+process.argv.forEach((val, index) => {
+  // console.log(`${index}: ${val}`);
+  let hasil=[];
+  if(index>1)
+  {
+    arrKalimat.push(val)
+  }
+
+});
+  kalimat=arrKalimat.join(" ")
+
+console.log(convert(kalimat));
