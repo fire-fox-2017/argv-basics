@@ -24,3 +24,13 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let saidWord = '';
+process.argv.forEach((val, index, array) =>{
+  // console.log(`${index}: '${val}'`)
+  if(index > 1){
+    saidWord += convert(val)+" "
+  }else{
+    saidWord += (`${index}: '${val}'\n`);
+  }
+});
+console.log(saidWord);
